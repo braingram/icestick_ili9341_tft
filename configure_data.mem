@@ -1,0 +1,28 @@
+028  // display off
+0c0 123  // powercontrol1 to 4.6 volts
+0c1 110  // powercontrol2 to ?
+0c5 12b 12b  // vcomcontrol1 to 3.775, -1.425
+0c7 1c0  // vcomcontrol2 to VCOMH=VMH, VCOML=VML
+036 120  // memcontrol to MY, BGR
+//036 120  // memcontrol to MY, BGR
+03a 155  // colmod to 16 bits per pixel
+0b1 100 11b  // framecontrol to fosc/1, 70 hz
+0b7 107  // entrymode to low v detect, normal display
+011  // sleep out
+//029  // display on
+
+/*
+//028  // display off
+0c0 123  // powercontrol1 to 4.6 volts
+0c1 110  // powercontrol2 to ?
+0c5 12b 12b  // vcomcontrol1 to 3.775, -1.425
+0c7 1c0  // vcomcontrol2 to VCOMH=VMH, VCOML=VML
+036 188  // memcontrol to MY, BGR
+02a 100 100 101 13f
+02b 100 100 100 1ef
+03a 155  // colmod to 16 bits per pixel
+0b1 100 11b  // framecontrol to fosc/1, 70 hz
+0b7 107  // entrymode to low v detect, normal display
+011  // sleep out
+//029  // display on
+*/

@@ -1,0 +1,4 @@
+// send 3 nops
+000 000 000
+// finally send reset
+001

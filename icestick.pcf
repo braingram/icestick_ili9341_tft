@@ -1,0 +1,42 @@
+# full iCEstick pinout:
+# http://www.pighixxx.com/test/portfolio-items/icestick/
+
+set_io --warn-no-port RX 9
+set_io --warn-no-port TX 8
+set_io CLK 21  # 12 MHz
+
+set_io LED1 99
+set_io LED2 98
+set_io LED3 97
+set_io LED4 96
+set_io LED5 95
+
+# J1
+set_io D0 112
+set_io D1 113
+set_io D2 114
+set_io D3 115
+set_io D4 116
+set_io D5 117
+set_io D6 118
+set_io D7 119
+
+# J3
+set_io CS 62
+set_io CD 61
+set_io WR 60
+set_io RD 56
+set_io RST 48
+# 47
+# 45
+# 44
+
+# PMOD.
+# PMOD1 78
+# PMOD2 79
+# PMOD3 80
+# PMOD4 81
+# PMOD7 87
+# PMOD8 88
+# PMOD9 90
+# PMOD10 91

@@ -1,0 +1,5 @@
+02a  // col_addr_set
+100 100 101 13f  // 0 to 319
+02b // page_addr_set
+100 100 100 1ef  // 0 to 239
+02c  // memory_write
