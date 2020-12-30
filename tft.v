@@ -23,12 +23,6 @@ module tft #(
 	wire [7:0] data;
 	assign data = {D7, D6, D5, D4, D3, D2, D1, D0};
 
-	//assign LED1 = WR;
-	//assign LED2 = CD;
-	//assign LED3 = CS; (always low)
-	//assign LED4 = RD; (always high)
-	//assign LED5 = CLK;
-	
 	wire [4:0] debug;
 	assign {LED5, LED4, LED3, LED2, LED1} = debug;
 
@@ -59,40 +53,11 @@ module tft #(
 		end
 	end
 
-	/*
-	//localparam integer cdiv = 24;
-	localparam integer cdiv = 2;
-	reg [cdiv-1:0] clk_div = 0;
-
-	always @(posedge CLK) begin
-		clk_div <= clk_div + 1;
-	end
-	*/
-
-	/*
-	//localparam integer rdel = 20;
-	localparam integer rdel = 24;
-	reg [rdel:0] rdelay = 0;
-	wire sub_clk;
-	assign sub_clk = clk_div[cdiv-1];
-
-	always @(posedge sub_clk) begin
-		rdelay <= rdelay + 1;
-		//if (!rdelay[rdel]) begin
-		//	rdelay <= rdelay + 1;
-		//end
-	end
-	//assign {LED5, LED4, LED3, LED2, LED1} = rdelay;
-	*/
-
 	ili9341 #(
-		//.CLOCK_FREQ_HZ(12000000 / (2 ** cdiv))
 		.CLOCK_FREQ_HZ(12000000)
 	) tft_1 (
 		.fill_color(fill_color),
 		.in_clk(CLK),
-		//.in_clk(clk_div[cdiv-1]),
-		//.in_rst(!rdelay[rdel]),
 		.in_rst(1'b0),
 		.out_rd(RD),
 		.out_wr(WR),
