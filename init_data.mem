@@ -1,0 +1,43 @@
+/* 10 bits per command with bits 8 and 9 as flags
+ *   9 =  delay or no delay
+ *   8 = command or data
+ *   7:0 = command/data payload
+ */
+
+000  // send 3 nops
+000
+000
+201  // send reset and delay
+028  // display off
+0c0  // powercontrol1 to 4.6 volts
+123
+0c1  // powercontrol2 to ?
+110
+0c5  // vcomcontrol1 to 3.775, -1.425
+12b
+12b
+0c7  // vcomcontrol2 to VCOMH=VMH, VCOML=VML
+1c0
+036  // memcontrol to MY, BGR
+120
+03a  // colmod to 16 bits per pixel
+155
+0b1  // framecontrol to fosc/1, 70 hz
+100
+11b
+0b7  // entrymode to low v detect, normal display
+107
+211  // sleep out
+029  // display on
+
+02a  // setloc data: col_addr_set 0 to 319
+100
+100
+101
+13f
+02b // page_addr_set 0 to 239
+100
+100
+100
+1ef
+02c  // memory_write

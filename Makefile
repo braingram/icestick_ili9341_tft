@@ -5,6 +5,9 @@ DEVICE = hx1k
 
 FILES = $(PROJ).v
 FILES += ili9341_tft.v
+FILES += config_ram.v
+
+DEPS = init_data.mem
 
 all: $(PROJ).rpt $(PROJ).bin
 
@@ -17,7 +20,7 @@ all: $(PROJ).rpt $(PROJ).bin
 # which yosys wants to make into a dlatch but the yosys abc command fails to match
 # to the ice40 hardware
 
-%.json: %.v $(FILES)
+%.json: %.v $(FILES) $(DEPS)
 	yosys -p 'synth_ice40 -top $(PROJ) -retime -json $@' $(FILES)
 
 %.asc: %.json
