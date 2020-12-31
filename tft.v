@@ -61,6 +61,7 @@ module tft #(
 		.in_rst(1'b0),
 		.out_rd(RD),
 		.out_wr(WR),
+		.out_rst(RST),
 		.out_cd(CD),
 		.out_cs(CS),
 		.out_data(data),

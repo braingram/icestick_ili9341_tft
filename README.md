@@ -86,3 +86,21 @@ CONFIGURE (send config [above], wait 120 ms)
 SETLOC (send location)
 RENDER (write pixels, goto setloc)
 
+
+Prior to simplification
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:   247/ 1280    19%
+Info: 	        ICESTORM_RAM:     0/   16     0%
+Info: 	               SB_IO:    19/  112    16%
+Info: 	               SB_GB:     4/    8    50%
+Info: 	        ICESTORM_PLL:     0/    1     0%
+Info: 	         SB_WARMBOOT:     0/    1     0%
+
+After simplification
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:   153/ 1280    11%
+Info: 	        ICESTORM_RAM:     1/   16     6%
+Info: 	               SB_IO:    19/  112    16%
+Info: 	               SB_GB:     5/    8    62%
+Info: 	        ICESTORM_PLL:     0/    1     0%
+Info: 	         SB_WARMBOOT:     0/    1     0%
